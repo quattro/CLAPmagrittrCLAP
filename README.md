@@ -120,7 +120,7 @@ This is done with the `%👌%` operator:
 iris %👏%
   subset(Sepal.Length > mean(Sepal.Length)) %👌%
   cor(Sepal.Length, Sepal.Width)
-#> [1] 0.3365679
+#> [1] 0.3366969
 
 data.frame(z = rnorm(100)) %👌%
   ts.plot(z)
