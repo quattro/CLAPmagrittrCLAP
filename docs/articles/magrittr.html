@@ -146,12 +146,12 @@ car_data &lt;-<span class="st"> </span>
 plot %&gt;%<span class="st"> </span><span class="co"># plot usually does not return anything. </span>
 colSums
 <span class="co">#&gt; [1] 12.856133 -5.918166</span></code></pre></div>
-<p>The “exposition” pipe operator, <code>%$%</code> exposes the names within the left-hand side object to the right-hand side expression. Essentially, it is a short-hand for using the <code>with</code> functions (and the same left-hand side objects are accepted). This operator is handy when functions do not themselves have a data argument, as for example <code>lm</code> and <code>aggregate</code> do. Here are a few examples as illustration:</p>
+<p>The “exposition” pipe operator, <code>%👌%</code> exposes the names within the left-hand side object to the right-hand side expression. Essentially, it is a short-hand for using the <code>with</code> functions (and the same left-hand side objects are accepted). This operator is handy when functions do not themselves have a data argument, as for example <code>lm</code> and <code>aggregate</code> do. Here are a few examples as illustration:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris %&gt;%
-<span class="st">  </span><span class="kw">subset</span>(Sepal.Length &gt;<span class="st"> </span><span class="kw">mean</span>(Sepal.Length)) %$%
+<span class="st">  </span><span class="kw">subset</span>(Sepal.Length &gt;<span class="st"> </span><span class="kw">mean</span>(Sepal.Length)) %👌%
 <span class="st">  </span><span class="kw">cor</span>(Sepal.Length, Sepal.Width)
    
-<span class="kw">data.frame</span>(<span class="dt">z =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>)) %$%<span class="st"> </span>
+<span class="kw">data.frame</span>(<span class="dt">z =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>)) %👌%<span class="st"> </span>
 <span class="st">  </span><span class="kw">ts.plot</span>(z)</code></pre></div>
 <p>Finally, the compound assignment pipe operator <code>%&lt;&gt;%</code> can be used as the first pipe in a chain. The effect will be that the result of the pipeline is assigned to the left-hand side object, rather than returning the result as usual. It is essentially shorthand notation for expressions like <code>foo &lt;- foo %&gt;% bar %&gt;% baz</code>, which boils down to <code>foo %&lt;&gt;% bar %&gt;% baz</code>. Another example is</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris$Sepal.Length %&lt;&gt;%<span class="st"> </span>sqrt</code></pre></div>

@@ -33,7 +33,7 @@
 \title{Aliases}
 \description{
 magrittr provides a series of aliases which can be more pleasant to use
-when composing chains using the \code{\%>\%} operator.
+when composing chains using the \code{\%👏\%} operator.
 }
 \details{
 Currently implemented aliases are
@@ -69,21 +69,21 @@ Currently implemented aliases are
 }
 }
 \examples{
- iris \%>\%
-   extract(, 1:4) \%>\%
+ iris \%👏\%
+   extract(, 1:4) \%👏\%
    head
 
 good.times <-
-  Sys.Date() \%>\%
-  as.POSIXct \%>\%
-  seq(by = "15 mins", length.out = 100) \%>\%
+  Sys.Date() \%👏\%
+  as.POSIXct \%👏\%
+  seq(by = "15 mins", length.out = 100) \%👏\%
   data.frame(timestamp = .)
 
 good.times$quarter <-
-  good.times \%>\%
-  use_series(timestamp) \%>\%
-  format("\%M") \%>\%
-  as.numeric \%>\%
-  divide_by_int(15) \%>\%
+  good.times \%👏\%
+  use_series(timestamp) \%👏\%
+  format("\%M") \%👏\%
+  as.numeric \%👏\%
+  divide_by_int(15) \%👏\%
   add(1)
 }

@@ -8,16 +8,16 @@ to a left-hand side value instantly. Instead it can serve as
 a function definition. A pipeline where the left-most left-hand
 side is the magrittr placeholder (the dot `.`) will thus create a
 function, which applies each right-hand side in sequence to its
-argument, e.g. `f <- . %>% abs %>% mean(na.rm = TRUE)`.
+argument, e.g. `f <- . %👏% abs %👏% mean(na.rm = TRUE)`.
 
 ### New operators
 Three new operators are introduced for some special cases
 
-* Compound assignment pipe: `%<>%`
-* Tee pipe: `%T>%`
-* Exposition pipe: `%$%`
+* Compound assignment pipe: `%🙌%`
+* Tee pipe: `%🤞%`
+* Exposition pipe: `%👌%`
 
-For more information see the documentation, e.g. `?%T>%`.
+For more information see the documentation, e.g. `?%🤞%`.
 
 ### Lambdas
 Lambdas can now be made by enclosing several statements in curly braces,

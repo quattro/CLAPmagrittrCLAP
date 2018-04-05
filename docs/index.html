@@ -149,13 +149,13 @@ f &lt;-<span class="st"> </span>function(.) <span class="kw">sin</span>(<span cl
 <div id="pipe-with-exposition-of-variables" class="section level3">
 <h3 class="hasAnchor">
 <a href="#pipe-with-exposition-of-variables" class="anchor"></a>Pipe with exposition of variables</h3>
-<p>Many functions accept a data argument, e.g. <code>lm</code> and <code>aggregate</code>, which is very useful in a pipeline where data is first processed and then passed into such a function. There are also functions that do not have a data argument, for which it is useful to expose the variables in the data. This is done with the <code>%$%</code> operator:</p>
+<p>Many functions accept a data argument, e.g. <code>lm</code> and <code>aggregate</code>, which is very useful in a pipeline where data is first processed and then passed into such a function. There are also functions that do not have a data argument, for which it is useful to expose the variables in the data. This is done with the <code>%👌%</code> operator:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris %&gt;%
-<span class="st">  </span><span class="kw">subset</span>(Sepal.Length &gt;<span class="st"> </span><span class="kw">mean</span>(Sepal.Length)) %$%
+<span class="st">  </span><span class="kw">subset</span>(Sepal.Length &gt;<span class="st"> </span><span class="kw">mean</span>(Sepal.Length)) %👌%
 <span class="st">  </span><span class="kw">cor</span>(Sepal.Length, Sepal.Width)
 <span class="co">#&gt; [1] 0.3361992</span>
 
-<span class="kw">data.frame</span>(<span class="dt">z =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>)) %$%
+<span class="kw">data.frame</span>(<span class="dt">z =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>)) %👌%
 <span class="st">  </span><span class="kw">ts.plot</span>(z)</code></pre></div>
 <p><img src="reference/figures/exposition-1.png" width="672"></p>
 </div>
